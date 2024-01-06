@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.post("/fooddata",(req,res)=>{
+router.get("/fooddata",(req,res)=>{
     try {
         global.food_category=[
             {"_id":{"$oid":"657ad039f9254bc7e33f51ca"},"CategoryName":"Starter"},

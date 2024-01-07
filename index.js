@@ -7,7 +7,7 @@ const connect_mongoDb = require('./db');
 connect_mongoDb();
 
 
-app.use(cors());
+// app.use(cors());
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://food-app-mern-frontend.vercel.app');

@@ -9,12 +9,21 @@ connect_mongoDb();
 
 // app.use(cors());
 
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://food-app-mern-frontend.vercel.app');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
-  });
+// app.options('*', cors());
+
+// app.use((req, res, next) => {
+//     res.setHeader('Access-Control-Allow-Origin', 'https://food-app-mern-frontend.vercel.app');
+//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+//     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//     next();
+//   });
+
+app.use(cors({
+    origin: 'https://food-app-mern-frontend.vercel.app',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 200,
+})); 
   
 
 // const bodyParser = require("body-parser")

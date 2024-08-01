@@ -7,7 +7,7 @@ const connect_mongoDb = require('./db');
 connect_mongoDb();
 
 
-// app.use(cors());
+app.use(cors());
 
 // app.options('*', cors());
 
@@ -18,12 +18,13 @@ connect_mongoDb();
 //     next();
 //   });
 
-app.use(cors({
-    origin: 'https://food-app-mern-frontend.vercel.app',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-    optionsSuccessStatus: 200,
-})); 
+// app.use(cors({
+//     // origin: 'https://food-app-mern-frontend.vercel.app',
+//     origin: 'https://localhost:3000',
+//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//     credentials: true,
+//     optionsSuccessStatus: 200,
+// })); 
   
 
 const bodyParser = require("body-parser")
